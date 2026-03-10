@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Madurai Mandhi Briyani - Authentic slow-cooked dum biryani in Ellisnagar, Madurai. Order now via WhatsApp!">
+<title>Madurai Mandhi Briyani - Ellisnagar, Madurai</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Taviraj:wght@300;400;600&family=Noto+Serif+Tamil:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--saffron:#F4A200;--deep-red:#9B1C1C;--ember:#D4380D;--gold:#FFD666;--cream:#FFF8ED;--dark:#1A0A00;--smoke:#2E1503;--text-light:#F5E6CC}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{background:var(--dark);color:var(--text-light);font-family:'Taviraj',serif;overflow-x:hidden}
+#particles{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden}
+.spark{position:absolute;border-radius:50%;animation:floatUp linear infinite;opacity:0}
+@keyframes floatUp{0%{transform:translateY(100vh) scale(1);opacity:.8}100%{transform:translateY(-10vh) scale(0);opacity:0}}
+nav{position:fixed;top:0;width:100%;z-index:1000;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to bottom,rgba(26,10,0,.97),transparent);backdrop-filter:blur(4px)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--gold);letter-spacing:1px;text-decoration:none}
+.nav-logo span{color:var(--ember)}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{color:var(--text-light);text-decoration:none;font-size:.9rem;letter-spacing:1px;text-transform:uppercase;transition:color .3s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--saffron);transition:width .3s}
+.nav-links a:hover{color:var(--gold)}.nav-links a:hover::after{width:100%}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:26px;height:2px;background:var(--gold);border-radius:2px}
+#hero{position:relative;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;overflow:hidden;z-index:1;padding:0 20px}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 70%,rgba(212,56,13,.25) 0%,transparent 70%),radial-gradient(ellipse 50% 50% at 30% 30%,rgba(244,162,0,.1) 0%,transparent 60%),linear-gradient(160deg,#1A0A00 0%,#2E1503 50%,#1A0A00 100%)}
+.hero-plate{font-size:8rem;animation:spinIn 1.2s cubic-bezier(.34,1.56,.64,1) forwards;filter:drop-shadow(0 0 40px rgba(244,162,0,.6));margin-bottom:10px;display:block}
+@keyframes spinIn{from{transform:rotate(-180deg) scale(0);opacity:0}to{transform:rotate(0) scale(1);opacity:1}}
+.hero-badge{background:linear-gradient(135deg,var(--deep-red),var(--ember));color:#fff;font-size:.8rem;letter-spacing:3px;text-transform:uppercase;padding:6px 20px;border-radius:40px;margin-bottom:20px;animation:fadeUp 1s .4s both;border:1px solid rgba(244,162,0,.3);display:inline-block}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,7vw,5.5rem);font-weight:900;line-height:1.05;color:var(--cream);animation:fadeUp 1s .6s both;text-shadow:0 0 60px rgba(244,162,0,.3)}
+.hero-title .accent{color:var(--saffron)}
+.hero-sub{font-size:1.2rem;color:rgba(245,230,204,.7);margin:16px 0 10px;animation:fadeUp 1s .8s both;letter-spacing:2px}
+.hero-tamil{font-family:'Noto Serif Tamil',serif;font-size:1.1rem;color:var(--gold);margin-bottom:36px;animation:fadeUp 1s 1s both}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;animation:fadeUp 1s 1.2s both}
+.scroll-hint{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(245,230,204,.4);font-size:.75rem;letter-spacing:2px;text-transform:uppercase;animation:fadeUp 1s 1.6s both}
+.scroll-arrow{width:24px;height:24px;border-right:2px solid var(--saffron);border-bottom:2px solid var(--saffron);transform:rotate(45deg);animation:bounce 1.5s infinite}
+@keyframes bounce{0%,100%{transform:rotate(45deg) translateY(0)}50%{transform:rotate(45deg) translateY(6px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.btn-primary{background:linear-gradient(135deg,var(--saffron),var(--ember));color:var(--dark);font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;padding:14px 36px;border:none;border-radius:50px;cursor:pointer;text-decoration:none;letter-spacing:1px;box-shadow:0 8px 32px rgba(244,162,0,.4);transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden;display:inline-block}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(244,162,0,.6)}
+.btn-outline{border:2px solid var(--saffron);color:var(--saffron);background:transparent;font-family:'Playfair Display',serif;font-size:1rem;padding:14px 36px;border-radius:50px;cursor:pointer;text-decoration:none;letter-spacing:1px;transition:all .3s;display:inline-block}
+.btn-outline:hover{background:var(--saffron);color:var(--dark)}
+.stats-bar{background:rgba(244,162,0,.05);border-top:1px solid rgba(244,162,0,.1);border-bottom:1px solid rgba(244,162,0,.1);padding:40px 20px;display:flex;justify-content:center;gap:60px;flex-wrap:wrap;position:relative;z-index:1}
+.stat-item{text-align:center}
+.stat-number{font-family:'Playfair Display',serif;font-size:2.4rem;color:var(--gold);font-weight:900;display:block}
+.stat-label{color:rgba(245,230,204,.5);font-size:.85rem;letter-spacing:1px;text-transform:uppercase}
+section{position:relative;z-index:1}
+.sec{padding:100px 20px}
+.section-header{text-align:center;margin-bottom:56px}
+.section-label{font-size:.75rem;letter-spacing:4px;text-transform:uppercase;color:var(--saffron);margin-bottom:12px;display:block}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);color:var(--cream);line-height:1.1}
+.section-divider{width:60px;height:3px;background:linear-gradient(90deg,var(--saffron),var(--ember));margin:20px auto 0;border-radius:2px}
+#offer{position:relative;z-index:1;background:linear-gradient(135deg,var(--deep-red) 0%,var(--ember) 50%,var(--saffron) 100%);padding:80px 20px;text-align:center;overflow:hidden}
+#offer::before{content:'🍛🍛🍛🍛🍛🍛🍛🍛🍛🍛🍛🍛🍛🍛🍛🍛';position:absolute;top:10px;left:0;font-size:1.5rem;opacity:.07;letter-spacing:10px;white-space:nowrap;width:200%;animation:scrollText 15s linear infinite}
+@keyframes scrollText{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.offer-tag{display:inline-block;background:var(--dark);color:var(--gold);font-size:.75rem;letter-spacing:4px;text-transform:uppercase;padding:6px 20px;border-radius:4px;margin-bottom:20px;font-weight:700}
+.offer-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.5rem);color:var(--dark);font-weight:900;margin-bottom:12px}
+.offer-subtitle{color:rgba(26,10,0,.65);font-size:1rem;max-width:520px;margin:0 auto}
+.offer-cards{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+.offer-card{background:rgba(26,10,0,.87);border:1px solid rgba(244,162,0,.3);border-radius:16px;padding:28px 32px;width:220px;text-align:center;backdrop-filter:blur(10px);transition:transform .3s;position:relative;overflow:hidden}
+.offer-card::after{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--saffron),var(--gold))}
+.offer-card:hover{transform:translateY(-8px)}
+.offer-emoji{font-size:2.5rem;margin-bottom:12px;display:block}
+.offer-card h3{color:var(--gold);font-family:'Playfair Display',serif;font-size:1.05rem;margin-bottom:8px}
+.offer-card p{color:rgba(245,230,204,.65);font-size:.85rem;line-height:1.5;margin-bottom:14px}
+.offer-price{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--saffron);font-weight:900}
+.offer-price s{color:rgba(245,230,204,.35);font-size:1rem;margin-right:4px}
+.menu-bg{background:linear-gradient(180deg,var(--dark) 0%,var(--smoke) 50%,var(--dark) 100%)}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:28px;max-width:1100px;margin:0 auto}
+.menu-card{background:linear-gradient(135deg,rgba(46,21,3,.8),rgba(26,10,0,.9));border:1px solid rgba(244,162,0,.15);border-radius:20px;padding:32px 28px;transition:all .4s;position:relative;overflow:hidden;cursor:pointer}
+.menu-card:hover{transform:translateY(-6px);border-color:rgba(244,162,0,.4);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.menu-icon{font-size:3rem;margin-bottom:16px;display:block}
+.menu-name{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--cream);margin-bottom:8px}
+.menu-desc{color:rgba(245,230,204,.55);font-size:.9rem;line-height:1.6;margin-bottom:20px}
+.menu-bottom{display:flex;justify-content:space-between;align-items:center}
+.menu-price{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.4rem;font-weight:700}
+.add-btn{background:linear-gradient(135deg,var(--saffron),var(--ember));color:var(--dark);border:none;width:36px;height:36px;border-radius:50%;font-size:1.3rem;cursor:pointer;font-weight:700;transition:transform .2s;display:flex;align-items:center;justify-content:center}
+.add-btn:hover{transform:scale(1.15)}
+.menu-badge{position:absolute;top:16px;right:16px;background:var(--deep-red);color:#fff;font-size:.65rem;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:20px}
+.order-bg{background:var(--smoke)}
+.order-container{max-width:700px;margin:0 auto;background:rgba(26,10,0,.82);border:1px solid rgba(244,162,0,.2);border-radius:24px;padding:48px 40px;box-shadow:0 40px 80px rgba(0,0,0,.5)}
+.cart-preview{background:rgba(244,162,0,.08);border:1px solid rgba(244,162,0,.2);border-radius:12px;padding:16px 20px;margin-bottom:24px;display:none}
+.cart-preview h4{color:var(--gold);font-family:'Playfair Display',serif;margin-bottom:10px}
+#cartItems{color:rgba(245,230,204,.7);font-size:.9rem}
+#cartTotal{color:var(--saffron);font-family:'Playfair Display',serif;font-size:1.2rem;margin-top:10px;border-top:1px solid rgba(244,162,0,.2);padding-top:10px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-group{margin-bottom:22px}
+.form-group label{display:block;color:var(--saffron);font-size:.78rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;font-weight:600}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(46,21,3,.6);border:1px solid rgba(244,162,0,.2);color:var(--text-light);padding:14px 18px;border-radius:10px;font-family:'Taviraj',serif;font-size:1rem;outline:none;transition:border-color .3s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--saffron)}
+.form-group select option{background:#2E1503}
+.form-group textarea{resize:vertical;min-height:100px}
+.order-btn{width:100%;background:linear-gradient(135deg,var(--saffron),var(--ember));color:var(--dark);border:none;padding:18px;border-radius:50px;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;cursor:pointer;letter-spacing:1px;transition:transform .2s,box-shadow .2s;box-shadow:0 8px 32px rgba(244,162,0,.35)}
+.order-btn:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(244,162,0,.55)}
+.success-msg{display:none;background:rgba(20,80,20,.4);border:1px solid #4CAF50;border-radius:10px;padding:20px;text-align:center;color:#A5D6A7;margin-top:20px;font-family:'Playfair Display',serif;font-size:1.05rem}
+.reviews-grid{display:flex;gap:24px;max-width:1000px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.review-card{background:rgba(26,10,0,.8);border:1px solid rgba(244,162,0,.15);border-radius:16px;padding:28px;max-width:300px;position:relative}
+.review-quote{position:absolute;top:16px;right:20px;font-size:3rem;color:rgba(244,162,0,.1);font-family:Georgia,serif;line-height:1}
+.review-stars{color:var(--gold);margin-bottom:12px}
+.review-text{color:rgba(245,230,204,.7);font-size:.93rem;line-height:1.7;margin-bottom:20px;font-style:italic}
+.reviewer{display:flex;align-items:center;gap:12px}
+.reviewer-avatar{width:44px;height:44px;background:linear-gradient(135deg,var(--saffron),var(--ember));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.reviewer-name{font-family:'Playfair Display',serif;color:var(--cream);font-size:.95rem}
+.reviewer-loc{color:rgba(245,230,204,.4);font-size:.8rem}
+.enq-bg{background:linear-gradient(180deg,var(--smoke),var(--dark))}
+.enquiry-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1.5fr;gap:48px;align-items:start}
+.enquiry-info h3{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--cream);margin-bottom:24px}
+.info-item{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px}
+.info-icon{font-size:1.5rem;flex-shrink:0;margin-top:3px}
+.info-text h4{color:var(--gold);font-size:.85rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.info-text p{color:rgba(245,230,204,.65);line-height:1.6;font-size:.93rem}
+.info-text a{color:var(--saffron);text-decoration:none}
+.enquiry-form-box{background:rgba(46,21,3,.5);border:1px solid rgba(244,162,0,.15);border-radius:20px;padding:40px}
+.loc-bg{background:var(--dark);text-align:center}
+.map-wrapper{max-width:900px;margin:40px auto 0;border-radius:20px;overflow:hidden;border:2px solid rgba(244,162,0,.25);box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.map-wrapper iframe{width:100%;height:420px;border:none;display:block}
+.map-btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:linear-gradient(135deg,var(--saffron),var(--ember));color:var(--dark);font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;padding:14px 36px;border-radius:50px;text-decoration:none;letter-spacing:1px;box-shadow:0 8px 32px rgba(244,162,0,.4);transition:transform .2s}
+.map-btn:hover{transform:translateY(-3px)}
+footer{background:#0D0500;padding:60px 20px 30px;text-align:center;position:relative;z-index:1;border-top:1px solid rgba(244,162,0,.1)}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--gold);margin-bottom:10px}
+.footer-tagline{color:rgba(245,230,204,.4);font-size:.9rem;margin-bottom:30px}
+.footer-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:30px}
+.footer-links a{color:rgba(245,230,204,.5);text-decoration:none;font-size:.9rem;transition:color .3s}
+.footer-links a:hover{color:var(--saffron)}
+.footer-bottom{color:rgba(245,230,204,.25);font-size:.8rem;margin-top:6px}
+.floating-order{position:fixed;bottom:30px;right:30px;z-index:999;background:linear-gradient(135deg,var(--saffron),var(--ember));color:var(--dark);width:64px;height:64px;border-radius:50%;font-size:1.8rem;text-decoration:none;display:flex;align-items:center;justify-content:center;animation:pulse 2.5s infinite;transition:transform .3s}
+.floating-order:hover{transform:scale(1.15)}
+@keyframes pulse{0%,100%{box-shadow:0 8px 32px rgba(244,162,0,.5)}50%{box-shadow:0 8px 50px rgba(244,162,0,.9)}}
+.toast{position:fixed;bottom:110px;right:30px;background:linear-gradient(135deg,var(--saffron),var(--ember));color:var(--dark);padding:14px 24px;border-radius:50px;font-family:'Playfair Display',serif;font-weight:700;z-index:9999;opacity:0;transform:translateY(20px);transition:opacity .4s,transform .4s;pointer-events:none}
+.toast.show{opacity:1;transform:translateY(0)}
+@media(max-width:768px){
+  nav{padding:14px 20px}
+  .nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:rgba(26,10,0,.98);flex-direction:column;gap:0;padding:10px 0}
+  .nav-links.open{display:flex}
+  .nav-links li a{display:block;padding:14px 28px;font-size:1rem}
+  .hamburger{display:flex}
+  .hero-plate{font-size:5rem}
+  .enquiry-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .order-container{padding:28px 20px}
+  .enquiry-form-box{padding:28px 20px}
+  .stats-bar{gap:30px}
+  .floating-order{width:54px;height:54px;font-size:1.5rem;bottom:20px;right:20px}
+}
+</style>
+</head>
+<body>
+
+<div id="particles"></div>
+<div class="toast" id="toast">Added!</div>
+<a href="#order" class="floating-order" title="Order Now">🍛</a>
+
+<nav>
+  <a href="#hero" class="nav-logo">Madurai <span>Mandhi</span></a>
+  <button class="hamburger" id="menuToggle"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#offer"    onclick="closeNav()">Offers</a></li>
+    <li><a href="#menu"     onclick="closeNav()">Menu</a></li>
+    <li><a href="#order"    onclick="closeNav()">Order</a></li>
+    <li><a href="#enquiry"  onclick="closeNav()">Enquiry</a></li>
+    <li><a href="#location" onclick="closeNav()">Location</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hero-bg"></div>
+  <span class="hero-badge">Grand Opening - Ellisnagar, Madurai</span>
+  <span class="hero-plate">🍛</span>
+  <h1 class="hero-title">Madurai <span class="accent">Mandhi</span><br>Briyani</h1>
+  <p class="hero-sub">Slow-Cooked - Dum-Style - Authentic Madurai Taste</p>
+  <p class="hero-tamil">மதுரை மந்தி பிரியாணி - உண்மையான சுவை</p>
+  <div class="hero-cta">
+    <a href="#order" class="btn-primary">Order Now</a>
+    <a href="#menu"  class="btn-outline">View Menu</a>
+  </div>
+  <div class="scroll-hint"><span>Scroll</span><div class="scroll-arrow"></div></div>
+</section>
+
+<div class="stats-bar">
+  <div class="stat-item"><span class="stat-number" data-target="500">0</span><span class="stat-label">Happy Customers</span></div>
+  <div class="stat-item"><span class="stat-number" data-target="12">0</span><span class="stat-label">Signature Dishes</span></div>
+  <div class="stat-item"><span class="stat-number" data-target="25">0</span><span class="stat-label">Years of Legacy</span></div>
+  <div class="stat-item"><span class="stat-number" data-target="100">0</span><span class="stat-label">% Pure Halal</span></div>
+</div>
+
+<section id="offer">
+  <div class="offer-tag">Grand Opening Special</div>
+  <h2 class="offer-title">Taste Madurai's Finest - At Opening Prices!</h2>
+  <p class="offer-subtitle">For a limited time, celebrate our grand opening with exclusive discounts and free sides!</p>
+  <div class="offer-cards">
+    <div class="offer-card"><span class="offer-emoji">🎁</span><h3>Opening Combo</h3><p>Mutton Briyani + Salna + Raita + Dessert</p><div class="offer-price"><s>Rs.320</s> Rs.199</div></div>
+    <div class="offer-card"><span class="offer-emoji">👥</span><h3>Family Feast</h3><p>4 Biriyanis + 2 Salnas + 4 Drinks + Dessert</p><div class="offer-price"><s>Rs.1200</s> Rs.799</div></div>
+    <div class="offer-card"><span class="offer-emoji">🆓</span><h3>First Visit Free</h3><p>Free Gulab Jamun with every order above Rs.150</p><div class="offer-price">FREE!</div></div>
+    <div class="offer-card"><span class="offer-emoji">📦</span><h3>Bulk Order Deal</h3><p>20% off on orders above 10 plates for events</p><div class="offer-price">20% OFF</div></div>
+  </div>
+</section>
+
+<section id="menu"><div class="sec menu-bg">
+  <div class="section-header">
+    <span class="section-label">Our Specialities</span>
+    <h2 class="section-title">The Grand Briyani Menu</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="menu-grid">
+    <div class="menu-card"><span class="menu-badge">Best Seller</span><span class="menu-icon">🍖</span><h3 class="menu-name">Mutton Mandhi Briyani</h3><p class="menu-desc">Slow-cooked tender mutton on fragrant dum basmati rice with 18 secret spices. The crown jewel of Madurai.</p><div class="menu-bottom"><span class="menu-price">Rs.280</span><button class="add-btn" onclick="addToOrder('Mutton Mandhi Briyani',280)">+</button></div></div>
+    <div class="menu-card"><span class="menu-badge">Chef's Pick</span><span class="menu-icon">🍗</span><h3 class="menu-name">Chicken Mandhi Briyani</h3><p class="menu-desc">Juicy marinated chicken dum-cooked to perfection. Aromatic saffron rice that melts every bite.</p><div class="menu-bottom"><span class="menu-price">Rs.200</span><button class="add-btn" onclick="addToOrder('Chicken Mandhi Briyani',200)">+</button></div></div>
+    <div class="menu-card"><span class="menu-icon">🌿</span><h3 class="menu-name">Veg Dum Briyani</h3><p class="menu-desc">Garden vegetables slow-cooked with whole spices and kewra water. Rich, wholesome, full of flavour.</p><div class="menu-bottom"><span class="menu-price">Rs.150</span><button class="add-btn" onclick="addToOrder('Veg Dum Briyani',150)">+</button></div></div>
+    <div class="menu-card"><span class="menu-badge">Spicy</span><span class="menu-icon">🦐</span><h3 class="menu-name">Prawn Briyani</h3><p class="menu-desc">Freshly caught prawns in a fiery masala with long-grain rice and coastal spices.</p><div class="menu-bottom"><span class="menu-price">Rs.250</span><button class="add-btn" onclick="addToOrder('Prawn Briyani',250)">+</button></div></div>
+    <div class="menu-card"><span class="menu-icon">🥣</span><h3 class="menu-name">Mutton Salna</h3><p class="menu-desc">Rich, tangy mutton gravy - the perfect companion for any briyani. Made fresh every morning.</p><div class="menu-bottom"><span class="menu-price">Rs.80</span><button class="add-btn" onclick="addToOrder('Mutton Salna',80)">+</button></div></div>
+    <div class="menu-card"><span class="menu-icon">🍮</span><h3 class="menu-name">Gulab Jamun Kheer</h3><p class="menu-desc">Soft gulab jamuns soaking in rose-flavoured rabri. The sweetest ending to a royal meal.</p><div class="menu-bottom"><span class="menu-price">Rs.60</span><button class="add-btn" onclick="addToOrder('Gulab Jamun Kheer',60)">+</button></div></div>
+  </div>
+</div></section>
+
+<section id="order"><div class="sec order-bg">
+  <div class="section-header">
+    <span class="section-label">Place Your Order</span>
+    <h2 class="section-title">Order Fresh, Pick Up Hot</h2>
+    <div class="section-divider"></div>
+    <p style="margin-top:16px;color:rgba(245,230,204,.5);max-width:420px;margin-left:auto;margin-right:auto;">Pre-order your Briyani and pick it up fresh. No waiting!</p>
+  </div>
+  <div class="order-container">
+    <div class="cart-preview" id="cartBox">
+      <h4>Your Selections</h4>
+      <div id="cartItems"></div>
+      <div id="cartTotal"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Your Name *</label><input type="text" id="orderName" placeholder="e.g. Ravi Kumar"/></div>
+      <div class="form-group"><label>Phone Number *</label><input type="tel" id="orderPhone" placeholder="98765 43210"/></div>
+    </div>
+    <div class="form-group">
+      <label>Select Item *</label>
+      <select id="orderItem">
+        <option value="">-- Choose your Briyani --</option>
+        <option value="Mutton Mandhi Briyani - Rs.280">Mutton Mandhi Briyani - Rs.280</option>
+        <option value="Chicken Mandhi Briyani - Rs.200">Chicken Mandhi Briyani - Rs.200</option>
+        <option value="Veg Dum Briyani - Rs.150">Veg Dum Briyani - Rs.150</option>
+        <option value="Prawn Briyani - Rs.250">Prawn Briyani - Rs.250</option>
+        <option value="Mutton Salna - Rs.80">Mutton Salna - Rs.80</option>
+        <option value="Family Feast 4 plates - Rs.799">Family Feast 4 plates - Rs.799</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Quantity</label><input type="number" id="orderQty" min="1" max="50" value="1"/></div>
+      <div class="form-group"><label>Pickup Time</label><input type="time" id="orderTime"/></div>
+    </div>
+    <div class="form-group"><label>Special Instructions</label><textarea id="orderNotes" placeholder="Less spice, extra salna, no onion..."></textarea></div>
+    <button class="order-btn" onclick="submitOrder()">Confirm Order via WhatsApp</button>
+    <div class="success-msg" id="orderSuccess">Order sent to WhatsApp! We will confirm shortly. Thank you!</div>
+  </div>
+</div></section>
+
+<section id="reviews"><div class="sec" style="background:var(--dark)">
+  <div class="section-header">
+    <span class="section-label">Customer Love</span>
+    <h2 class="section-title">What Madurai is Saying</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card"><div class="review-quote">"</div><div class="review-stars">★★★★★</div><p class="review-text">The mutton briyani is absolutely divine. Every grain of rice perfectly cooked and the mutton just falls off the bone. Best in Ellisnagar!</p><div class="reviewer"><div class="reviewer-avatar">👨</div><div><div class="reviewer-name">Arjun Selvam</div><div class="reviewer-loc">Anna Nagar, Madurai</div></div></div></div>
+    <div class="review-card"><div class="review-quote">"</div><div class="review-stars">★★★★★</div><p class="review-text">Ordered the Family Feast - quantity and quality both amazing. The salna alone is worth the visit. Will definitely be coming back!</p><div class="reviewer"><div class="reviewer-avatar">👩</div><div><div class="reviewer-name">Priya Rajan</div><div class="reviewer-loc">KK Nagar, Madurai</div></div></div></div>
+    <div class="review-card"><div class="review-quote">"</div><div class="review-stars">★★★★★</div><p class="review-text">Authentic Madurai taste right here in Ellisnagar! The saffron aroma hits you before you open the parcel. Incredible opening offers!</p><div class="reviewer"><div class="reviewer-avatar">👨</div><div><div class="reviewer-name">Vikram Nair</div><div class="reviewer-loc">Ellisnagar, Madurai</div></div></div></div>
+  </div>
+</div></section>
+
+<section id="enquiry"><div class="sec enq-bg">
+  <div class="section-header">
+    <span class="section-label">Get in Touch</span>
+    <h2 class="section-title">Enquiries and Bulk Orders</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="enquiry-grid">
+    <div class="enquiry-info">
+      <h3>We'd Love to Hear From You</h3>
+      <div class="info-item"><span class="info-icon">📍</span><div class="info-text"><h4>Location</h4><p>Ellisnagar, Madurai,<br>Tamil Nadu - 625010</p></div></div>
+      <div class="info-item"><span class="info-icon">⏰</span><div class="info-text"><h4>Opening Hours</h4><p>Monday - Sunday<br>11:00 AM - 10:30 PM</p></div></div>
+      <div class="info-item"><span class="info-icon">📱</span><div class="info-text"><h4>Call / WhatsApp</h4><p><a href="tel:+918248088250">+91 82480 88250</a></p></div></div>
+      <div class="info-item"><span class="info-icon">📧</span><div class="info-text"><h4>Email</h4><p><a href="mailto:jk11122004@gmail.com">jk11122004@gmail.com</a></p></div></div>
+      <div class="info-item"><span class="info-icon">🎉</span><div class="info-text"><h4>Bulk and Event Orders</h4><p>We cater weddings, corporate events, and family gatherings. Call us for custom packages.</p></div></div>
+    </div>
+    <div class="enquiry-form-box">
+      <div class="form-group"><label>Full Name *</label><input type="text" id="enqName" placeholder="Your name"/></div>
+      <div class="form-group"><label>Phone Number *</label><input type="tel" id="enqPhone" placeholder="+91 XXXXX XXXXX"/></div>
+      <div class="form-group"><label>Enquiry Type</label>
+        <select id="enqType">
+          <option value="">-- Select type --</option>
+          <option>Bulk / Event Order</option>
+          <option>Catering Package</option>
+          <option>Menu / Pricing Info</option>
+          <option>Feedback</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Your Message</label><textarea id="enqMsg" placeholder="Tell us about your requirement..."></textarea></div>
+      <button class="order-btn" onclick="submitEnquiry()">Send Enquiry via WhatsApp</button>
+      <div class="success-msg" id="enqSuccess">Enquiry sent to WhatsApp! We will get back to you within 30 minutes.</div>
+    </div>
+  </div>
+</div></section>
+
+<section id="location"><div class="sec loc-bg">
+  <div class="section-header">
+    <span class="section-label">Find Us</span>
+    <h2 class="section-title">We're Right Here in Ellisnagar</h2>
+    <div class="section-divider"></div>
+    <p style="margin-top:16px;color:rgba(245,230,204,.5)">Come visit us - the aroma will guide you there!</p>
+  </div>
+  <div class="map-wrapper">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.15!2d78.1198!3d9.9252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5b96f4e1d1b%3A0xabc123!2sEllis%20Nagar%2C%20Madurai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <div style="text-align:center">
+    <a href="https://www.google.com/maps/search/Ellisnagar+Madurai+Tamil+Nadu" target="_blank" rel="noopener" class="map-btn">Open in Google Maps</a>
+  </div>
+</div></section>
+
+<footer>
+  <div class="footer-logo">Madurai Mandhi Briyani</div>
+  <p class="footer-tagline">Authentic Madurai Taste - Slow Cooked - Served with Love</p>
+  <div class="footer-links">
+    <a href="#hero">Home</a><a href="#offer">Offers</a><a href="#menu">Menu</a>
+    <a href="#order">Order</a><a href="#enquiry">Enquiry</a><a href="#location">Location</a>
+  </div>
+  <p class="footer-bottom">Ellisnagar, Madurai - 11 AM to 10:30 PM - +91 82480 88250</p>
+  <p class="footer-bottom">2024 Madurai Mandhi Briyani. All rights reserved.</p>
+</footer>
+
+<script>
+// MOBILE NAV
+document.getElementById('menuToggle').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+function closeNav() {
+  document.getElementById('navLinks').classList.remove('open');
+}
+
+// PARTICLES
+var pc = document.getElementById('particles');
+for (var i = 0; i < 25; i++) {
+  var s = document.createElement('div');
+  s.classList.add('spark');
+  s.style.left = (Math.random() * 100) + 'vw';
+  s.style.animationDuration = (4 + Math.random() * 8) + 's';
+  s.style.animationDelay = (Math.random() * 8) + 's';
+  var sz = (2 + Math.random() * 4) + 'px';
+  s.style.width = sz; s.style.height = sz;
+  var cls = ['#F4A200','#FFD666','#D4380D','#FF8C00'];
+  s.style.background = cls[Math.floor(Math.random() * 4)];
+  pc.appendChild(s);
+}
+
+// COUNTERS
+var countEls = document.querySelectorAll('[data-target]');
+var cObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (!e.isIntersecting) return;
+    var el = e.target, target = parseInt(el.dataset.target);
+    var suffix = target === 100 ? '%' : (target > 12 ? '+' : '');
+    var count = 0, step = target / 50;
+    var t = setInterval(function() {
+      count = Math.min(count + step, target);
+      el.textContent = Math.floor(count) + suffix;
+      if (count >= target) clearInterval(t);
+    }, 30);
+    cObs.unobserve(el);
+  });
+});
+countEls.forEach(function(el) { cObs.observe(el); });
+
+// CART
+var cart = {};
+var PRICES = {'Mutton Mandhi Briyani':280,'Chicken Mandhi Briyani':200,'Veg Dum Briyani':150,'Prawn Briyani':250,'Mutton Salna':80,'Gulab Jamun Kheer':60};
+
+function addToOrder(item, price) {
+  cart[item] = (cart[item] || 0) + 1;
+  updateCart();
+  showToast('Added: ' + item);
+}
+
+function updateCart() {
+  var box = document.getElementById('cartBox');
+  var ie  = document.getElementById('cartItems');
+  var te  = document.getElementById('cartTotal');
+  var keys = Object.keys(cart);
+  if (!keys.length) { box.style.display = 'none'; return; }
+  box.style.display = 'block';
+  var html = '', total = 0;
+  keys.forEach(function(k) {
+    var qty = cart[k], sub = (PRICES[k] || 0) * qty;
+    total += sub;
+    html += '<div style="display:flex;justify-content:space-between;margin-bottom:4px"><span>' + k + ' x' + qty + '</span><span>Rs.' + sub + '</span></div>';
+  });
+  ie.innerHTML = html;
+  te.innerHTML = 'Total: Rs.' + total;
+}
+
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(function() { t.classList.remove('show'); }, 2500);
+}
+
+// WHATSAPP OPEN — using api.whatsapp.com which works on all devices
+function goWhatsApp(text, alreadyEncoded) {
+  var encoded = alreadyEncoded ? text : encodeURIComponent(text);
+  var url = 'https://wa.me/918248088250?text=' + encoded;
+  window.open(url, '_blank');
+}
+
+// ORDER
+function submitOrder() {
+  var name  = document.getElementById('orderName').value.trim();
+  var phone = document.getElementById('orderPhone').value.trim();
+  var item  = document.getElementById('orderItem').value;
+  var qty   = document.getElementById('orderQty').value;
+  var time  = document.getElementById('orderTime').value;
+  var notes = document.getElementById('orderNotes').value.trim();
+
+  if (!name)  { alert('Please enter your name.'); return; }
+  if (!phone) { alert('Please enter your phone number.'); return; }
+  if (!item)  { alert('Please select an item from the menu.'); return; }
+
+  var extra = '';
+  var keys = Object.keys(cart);
+  if (keys.length) {
+    extra = keys.map(function(k){ return k + ' x' + cart[k]; }).join(', ');
+  }
+
+  var msg = [
+    '🍛 New Order - Madurai Mandhi Briyani',
+    'Name: ' + name,
+    'Phone: ' + phone,
+    'Item: ' + item,
+    'Qty: ' + qty,
+    'Pickup Time: ' + (time || 'ASAP'),
+    'Notes: ' + (notes || 'None'),
+    extra ? 'Extra Items: ' + extra : '',
+    'Thank you!'
+  ].filter(Boolean).join('%0A');
+
+  goWhatsApp(msg, true);
+  document.getElementById('orderSuccess').style.display = 'block';
+  cart = {};
+  updateCart();
+}
+
+// ENQUIRY
+function submitEnquiry() {
+  var name  = document.getElementById('enqName').value.trim();
+  var phone = document.getElementById('enqPhone').value.trim();
+  var type  = document.getElementById('enqType').value;
+  var msg   = document.getElementById('enqMsg').value.trim();
+
+  if (!name)  { alert('Please enter your name.'); return; }
+  if (!phone) { alert('Please enter your phone number.'); return; }
+
+  var text = [
+    '📋 Enquiry - Madurai Mandhi Briyani',
+    'Name: ' + name,
+    'Phone: ' + phone,
+    'Type: ' + (type || 'General'),
+    'Message: ' + (msg || 'No message'),
+    'Please reply. Thank you!'
+  ].join('%0A');
+
+  goWhatsApp(text, true);
+  document.getElementById('enqSuccess').style.display = 'block';
+}
+
+// SCROLL ANIMATIONS
+var animEls = document.querySelectorAll('.menu-card,.offer-card,.review-card,.info-item,.stat-item');
+var sObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e, i) {
+    if (!e.isIntersecting) return;
+    setTimeout(function() {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }, i * 80);
+    sObs.unobserve(e.target);
+  });
+}, { threshold: 0.1 });
+animEls.forEach(function(el) {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(30px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  sObs.observe(el);
+});
+</script>
+</body>
+</html>
